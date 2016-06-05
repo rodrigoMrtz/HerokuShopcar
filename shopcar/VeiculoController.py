@@ -24,7 +24,7 @@ def pesquisa(end):
             print("Acabou os veiculos desta categoria.")
             break
         numPag = numPag + 1
-        
+
 def salva(url_veiculo):
     xpath_categoria = "//*[contains(@class, 'categoria')]/a//text()"
     xpath_marca = "//*[contains(@class, 'marca')]/text()"
@@ -100,7 +100,6 @@ def salva(url_veiculo):
             pass
     print("Terminado.")
 
-
-arq = open("Marcas.txt", "r")
+arq = open("shopcar/Marcas.txt", "r")
 for linha in arq:
     pesquisa(linha.strip())

@@ -101,20 +101,6 @@ def salva(url_veiculo):
     print("Terminado.")
 
 
-arq = open("/home/rodrigo/Área de Trabalho/TCC/WebScrap_Python/Marcas.txt", "r")
-tempo = open("/home/rodrigo/tempo_shopcar.txt", "w")
-inicio = "Inicio: "+ str(datetime.now())
-tempo.write(inicio)
-tempo.close()
-print(datetime.now())
+arq = open("Marcas.txt", "r")
 for linha in arq:
     pesquisa(linha.strip())
-final = "Final: "+ str(datetime.now())
-arq.close()
-tempo = open("/home/rodrigo/tempo_shopcar.txt", "r")
-texto = tempo.readlines()
-texto.append(final)
-tempo = open("/home/rodrigo/tempo_shopcar.txt", "w")
-tempo.writelines(texto)
-tempo.close()
-print("Fim do processo: ",final )

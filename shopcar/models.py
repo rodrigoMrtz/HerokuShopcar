@@ -13,7 +13,6 @@ class Opcionais(models.Model):
         return self.nome
 
 class Veiculo(models.Model):
-    vei_pk = models.CharField(max_length=32, unique=True) 
     marca = models.ForeignKey(Marca, null = False)
     opcionais = models.ManyToManyField('Opcionais', through='VeiculoOpcionais')
     categoria = models.CharField(max_length=100, null=True)

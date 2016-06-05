@@ -1,0 +1,10 @@
+﻿create or replace view shopcar_veiculoconsulta as 
+	select row_number() over () as id,
+		marca_id,
+		categoria,
+		modelo,
+		ano_modelo,
+		min(preco) as preco_min, 
+		max(preco) as preco_max
+	from shopcar_veiculo 
+	group by categoria , modelo, ano_modelo, marca_id order by modelo

@@ -46,7 +46,6 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'shopcar',
     'chartit',
-    'haystack',
 )
 
 HAYSTACK_CONNECTIONS = {
@@ -96,7 +95,7 @@ WSGI_APPLICATION = 'sitecar.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
+        'NAME': 'shopcar',
 	'USER': 'postgres',
 	'PASSWORD':'postgres',
 	'HOST': '127.0.0.1',

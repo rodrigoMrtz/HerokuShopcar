@@ -156,7 +156,7 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
 
-# Servidor de arquivos estaticos, por padrao o Django não lida com
+# Servidor de arquivos estaticos, por padrao o Django nao lida com
 # arquivos estaticos, isso sera feito pelo Whitenoise.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'

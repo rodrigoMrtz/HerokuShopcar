@@ -5,6 +5,8 @@ import urllib3, lxml.html, hashlib
 from datetime import datetime
 from models import Veiculo, Marca, Opcionais, VeiculoOpcionais
 from consulta import Consulta
+import django
+
 
 def pesquisa(end):
     shop = "www.shopcar.com.br/"
@@ -100,6 +102,7 @@ def salva(url_veiculo):
             pass
     print("Terminado.")
 
+django.setup()
 arq = open("shopcar/Marcas.txt", "r")
 for linha in arq:
     pesquisa(linha.strip())
